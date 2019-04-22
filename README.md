@@ -40,7 +40,7 @@ const original = {
 original.a.b.f = original.a.b
 original.a.b.c.push(original.a)
 
-const flat = flatten(original, '_')
+const flat = flatten(original)
 /*
 {
   'a.b.c.0.val': 'one',
@@ -49,6 +49,18 @@ const flat = flatten(original, '_')
   'a.b.d': 'three',
   'a.e': 'four',
   'a.b.f': '[Circular]'
+}
+*/
+
+const underscoreFlat = flatten(original, '_')
+/*
+{
+  'a_b_c_0_val': 'one',
+  'a_b_c_1_val': 'two',
+  'a_b_c_2': '[Circular]',
+  'a_b_d': 'three',
+  'a_e': 'four',
+  'a_b_f': '[Circular]'
 }
 */
 ```
