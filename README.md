@@ -43,11 +43,11 @@ original.a.b.c.push(original.a)
 const flat = flatten(original, '_')
 /*
 {
-  'a.b.c.0': 'one',
-  'a.b.c.1': 'two',
+  'a.b.c.0.val': 'one',
+  'a.b.c.1.val': 'two',
   'a.b.c.2': '[Circular]',
-  'a.b.c.d': 'three',
-  'a.b.e': 'four',
+  'a.b.d': 'three',
+  'a.e': 'four',
   'a.b.f': '[Circular]'
 }
 */
