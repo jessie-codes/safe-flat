@@ -1,4 +1,10 @@
-# 1.0.0 (2019-04-22)
+## [1.0.1](https://github.com/jessie-codes/safe-flat/compare/v1.0.0...v1.0.1) (2019-05-03)
+
+### Chore
+
+* **package:** update eslint-plugin-node to version 9.0.0
+
+# [1.0.0](https://github.com/jessie-codes/safe-flat/compare/cac960c...v1.0.0) (2019-04-22)
 
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "safe-flat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safely flatten a nested JavaScript object.",
   "main": "src/index.js",
   "scripts": {
