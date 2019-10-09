@@ -66,7 +66,7 @@ test('it should use the passed in delimiter', (t) => {
   }
 
   const expected = {
-    'a_b': 1
+    a_b: 1
   }
 
   t.deepEqual(flatten(original, '_'), expected)
