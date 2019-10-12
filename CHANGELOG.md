@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/jessie-codes/safe-flat/compare/1.1.0...1.1.1) (2019-10-12)
+
+
+### Bug Fixes
+
+* properly handle date objects ([#17](https://github.com/jessie-codes/safe-flat/issues/17)) ([85bf838](https://github.com/jessie-codes/safe-flat/commit/85bf838)), closes [#16](https://github.com/jessie-codes/safe-flat/issues/16)
+
+
+
 # [1.1.0](https://github.com/jessie-codes/safe-flat/compare/v1.0.1...1.1.0) (2019-10-09)
 
 
