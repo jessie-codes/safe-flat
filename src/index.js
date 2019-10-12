@@ -1,12 +1,14 @@
 const defaultDelimiter = '.'
 
+const isDate = (obj) => {
+  return obj instanceof Date
+}
+
 module.exports = (obj, delimiter) => {
   const result = {}
   const seperator = delimiter || defaultDelimiter
 
-  if (typeof obj !== 'object') {
-    return obj
-  }
+  if (typeof obj !== 'object' || isDate(obj)) return obj
 
   const flat = (original, stack, prev) => {
     Object.entries(original).forEach(([key, value]) => {
@@ -15,12 +17,12 @@ module.exports = (obj, delimiter) => {
         : key
       if (typeof value === 'object' && value !== null) {
         stack.forEach((s) => {
-          if (value === s) {
+          if (value === s && !isDate(value)) {
             value = '[Circular]'
           }
         })
         stack.push(value)
-        if (typeof value === 'object') {
+        if (typeof value === 'object' && !isDate(value)) {
           return flat(value, stack, newKey)
         }
       }
