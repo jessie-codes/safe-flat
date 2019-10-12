@@ -112,3 +112,33 @@ test('it should return the original value if not an object', (t) => {
   const original = 'string'
   t.deepEqual(flatten(original), original)
 })
+
+test('it should handle date objects', (t) => {
+  const date = new Date()
+
+  t.deepEqual(flatten(date), date)
+
+  const original = {
+    a: {
+      b: {
+        c: date,
+        d: 'one'
+      },
+      e: {
+        f: date,
+        g: {
+          h: date
+        }
+      }
+    }
+  }
+
+  const expected = {
+    'a.b.c': date,
+    'a.b.d': 'one',
+    'a.e.f': date,
+    'a.e.g.h': date
+  }
+
+  t.deepEqual(flatten(original), expected)
+})
