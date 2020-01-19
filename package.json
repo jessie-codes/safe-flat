@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/jessie-codes/safe-flat#readme",
   "devDependencies": {
-    "ava": "^2.2.0",
+    "ava": "^3.0.0",
     "commitizen": "^4.0.3",
     "conventional-changelog-cli": "^2.0.23",
     "coveralls": "^3.0.6",
