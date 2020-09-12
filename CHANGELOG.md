@@ -1,4 +1,8 @@
-## [1.1.3](https://github.com/jessie-codes/safe-flat/compare/v1.1.1...v1.1.3) (2020-09-12)
+## [1.1.4](https://github.com/jessie-codes/safe-flat/compare/1.1.3...1.1.4) (2020-09-12)
+
+
+
+## [1.1.3](https://github.com/jessie-codes/safe-flat/compare/v1.1.1...1.1.3) (2020-09-12)
 
 
 
