@@ -1,5 +1,5 @@
-import test from 'ava'
-import flatten from '../src/index.js'
+const test = require('ava')
+const flatten = require('../src/index.js')
 
 test('it should return a flattened object', (t) => {
   const original = {

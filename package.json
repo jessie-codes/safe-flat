@@ -32,18 +32,18 @@
   },
   "homepage": "https://github.com/jessie-codes/safe-flat#readme",
   "devDependencies": {
-    "ava": "^2.2.0",
-    "commitizen": "^4.0.3",
-    "conventional-changelog-cli": "^2.0.23",
-    "coveralls": "^3.0.6",
-    "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
+    "ava": "^3.12.1",
+    "commitizen": "^4.2.1",
+    "conventional-changelog-cli": "^2.1.0",
+    "coveralls": "^3.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.8.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "nyc": "^14.1.1"
+    "nyc": "^15.1.0"
   },
   "config": {
     "commitizen": {
