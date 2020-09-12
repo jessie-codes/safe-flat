@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - name: Test & Lint
+      - name: Test
         env:
           COVERALLS_SERVICE_NAME: GitHub Actions CI
           COVERALLS_GIT_BRANCH: ${{ steps.extract_branch.outputs.branch }}
