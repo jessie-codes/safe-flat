@@ -10,12 +10,19 @@ jobs:
         node: [ '10', '12' ]
     name: Node ${{ matrix.node }}
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - uses: actions/checkout@v2
       - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
       - name: Test & Lint
+        env:
+          COVERALLS_SERVICE_NAME: GitHub Actions CI
+          COVERALLS_GIT_BRANCH: ${{ steps.extract_branch.outputs.branch }}
         run: |
           npm ci
           npm test
