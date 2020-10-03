@@ -4,7 +4,7 @@
   "description": "Safely flatten a nested JavaScript object.",
   "main": "src/index.js",
   "scripts": {
-    "commit": "git add --all && npx git-cz",
+    "commit": "git add --all && npx git-cz --signoff",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "fix": "eslint src test --fix",
     "lint": "eslint src test",
