@@ -64,3 +64,41 @@ const underscoreFlat = flatten(original, '_')
 }
 */
 ```
+### unflatten(obj, [delimiter])
+
+Unflats an object back to its original nested form. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references denoted by `[Circular]` are treated as Strings.
+
+``` javascript
+const unflatten = require('safe-flat')
+
+const original = {
+    'a.b.c.0.val': 'one',
+    'a.b.c.1.val': 'two',
+    'a.b.c.2': '[Circular]',
+    'a.b.d': 'three',
+    'a.e': 'four',
+    'a.b.f': '[Circular]'
+}
+
+
+const unflat = unflatten(original)
+
+/*{
+  a:{
+    b:{
+      c:[
+        {
+          val:'one'
+        },
+        {
+          val:'two'
+        },
+        '[Circular]'
+      ],
+      d:'three',
+      f:'[Circular]'
+    },
+    e:'four'
+  }
+}*/
+```

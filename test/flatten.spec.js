@@ -1,5 +1,5 @@
 const test = require('ava')
-const flatten = require('../src/index.js')
+const { flatten } = require('../src/index.js')
 
 test('it should return a flattened object', (t) => {
   const original = {
