@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/jessie-codes/safe-flat/compare/1.1.4...2.0.0) (2020-10-06)
+
+
+### Features
+
+* add an unflatten function that will take a flattened object and return a nested object ([cc7c6ef](https://github.com/jessie-codes/safe-flat/commit/cc7c6efe7062bddefcaa987c18d5ebd159b090fa)), closes [#32](https://github.com/jessie-codes/safe-flat/issues/32)
+
+
+### BREAKING CHANGES
+
+* New version now exports an object containing flatten and unflatten functions
+
+
+
 ## [1.1.4](https://github.com/jessie-codes/safe-flat/compare/1.1.3...1.1.4) (2020-09-12)
 
 
