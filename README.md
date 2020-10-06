@@ -22,7 +22,7 @@ $ npm i safe-flat
 Flats an object to one level deep. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references within the object will be replaced with `[Circular]`.
 
 ``` javascript
-const flatten = require('safe-flat')
+const { flatten } = require('safe-flat')
 
 const original = {
     a: {
@@ -69,7 +69,7 @@ const underscoreFlat = flatten(original, '_')
 Unflats an object back to its original nested form. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references denoted by `[Circular]` are treated as Strings.
 
 ``` javascript
-const unflatten = require('safe-flat')
+const { unflatten } = require('safe-flat')
 
 const original = {
     'a.b.c.0.val': 'one',
