@@ -4,7 +4,7 @@ const isDate = (obj) => {
   return obj instanceof Date
 }
 
-module.exports = (obj, delimiter) => {
+const flatten = (obj, delimiter) => {
   const result = {}
   const seperator = delimiter || defaultDelimiter
 
@@ -33,4 +33,29 @@ module.exports = (obj, delimiter) => {
   flat(obj, [obj])
 
   return result
+}
+
+const unflatten = (obj, delimiter) => {
+  const result = {}
+  const seperator = delimiter || defaultDelimiter
+
+  if (typeof obj !== 'object' || isDate(obj)) return obj
+
+  const unflat = (original) => {
+    Object.keys(original).forEach((key) => {
+      const newKeys = key.split(seperator)
+      newKeys.reduce((o, k, i) => {
+        return o[k] || (o[k] = isNaN(Number(newKeys[i + 1])) ? (newKeys.length - 1 === i ? original[key] : {}) : [])
+      }, result)
+    })
+  }
+
+  unflat(obj)
+
+  return result
+}
+
+module.exports = {
+  flatten,
+  unflatten
 }
