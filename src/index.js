@@ -22,7 +22,10 @@ const flatten = (obj, delimiter) => {
           }
         })
         stack.push(value)
-        if (typeof value === 'object' && !isDate(value)) {
+
+        if (Array.isArray(value) && value.length === 0) {
+          result[newKey] = value
+        } else if (typeof value === 'object' && !isDate(value)) {
           return flat(value, stack, newKey)
         }
       }

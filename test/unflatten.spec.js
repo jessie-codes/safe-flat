@@ -15,6 +15,13 @@ test('it should return an unflattened object', (t) => {
   t.deepEqual(unflatten(original), expected)
 })
 
+test('it should handle empty arrays', t => {
+  const original = { a: [], b: 1, 'c.d': [], 'e.0': 1, 'e.1': 2 }
+  const expected = { a: [], b: 1, c: { d: [] }, e: [1, 2] }
+
+  t.deepEqual(unflatten(original), expected)
+})
+
 test('it should handle nested arrays', (t) => {
   const original = {
     'a.0': 0,
