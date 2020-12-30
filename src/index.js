@@ -11,6 +11,12 @@ const flatten = (obj, delimiter) => {
   if (typeof obj !== 'object' || isDate(obj)) return obj
 
   const flat = (original, stack, prev) => {
+    if (!Object.values(original).length) {
+      result[prev] = original
+
+      return original
+    }
+
     Object.entries(original).forEach(([key, value]) => {
       const newKey = prev
         ? prev + seperator + key
@@ -23,9 +29,7 @@ const flatten = (obj, delimiter) => {
         })
         stack.push(value)
 
-        if (Array.isArray(value) && value.length === 0) {
-          result[newKey] = value
-        } else if (typeof value === 'object' && !isDate(value)) {
+        if (typeof value === 'object' && !isDate(value)) {
           return flat(value, stack, newKey)
         }
       }
