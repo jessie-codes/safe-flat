@@ -1,3 +1,14 @@
+## [2.0.1](https://github.com/jessie-codes/safe-flat/compare/2.0.0...2.0.1) (2020-12-31)
+
+
+### Bug Fixes
+
+* **flatten:** added support for empty objects ([e9b5a5b](https://github.com/jessie-codes/safe-flat/commit/e9b5a5b0eca247a1cec01b9280393f7f6eff2e1f)), closes [#39](https://github.com/jessie-codes/safe-flat/issues/39)
+* **flatten:** fixed flatten not handling empty arrays ([25b0ffe](https://github.com/jessie-codes/safe-flat/commit/25b0ffeb7cf7c0d344e103af8f40cae06be67d59)), closes [#39](https://github.com/jessie-codes/safe-flat/issues/39)
+* **flatten:** fixes flatten borking a completely empty object ([495e9e3](https://github.com/jessie-codes/safe-flat/commit/495e9e3f80b402cfdff8ded7d7b1c2ba22b6e5e4))
+
+
+
 # [2.0.0](https://github.com/jessie-codes/safe-flat/compare/1.1.4...2.0.0) (2020-10-06)
 
 
