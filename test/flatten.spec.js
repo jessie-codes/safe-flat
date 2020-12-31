@@ -15,6 +15,13 @@ test('it should return a flattened object', (t) => {
   t.deepEqual(flatten(original), expected)
 })
 
+test('It should handle a completely empty object', t => {
+  const original = {}
+  const expected = {}
+
+  t.deepEqual(flatten(original), expected)
+})
+
 test('It should process an empty array', t => {
   const original = {
     a: [],

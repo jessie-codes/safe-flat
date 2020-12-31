@@ -11,7 +11,7 @@ const flatten = (obj, delimiter) => {
   if (typeof obj !== 'object' || isDate(obj)) return obj
 
   const flat = (original, stack, prev) => {
-    if (!Object.values(original).length) {
+    if (!Object.values(original).length && prev) {
       result[prev] = original
 
       return original
