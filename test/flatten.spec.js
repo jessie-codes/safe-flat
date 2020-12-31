@@ -15,6 +15,47 @@ test('it should return a flattened object', (t) => {
   t.deepEqual(flatten(original), expected)
 })
 
+test('It should handle a completely empty object', t => {
+  const original = {}
+  const expected = {}
+
+  t.deepEqual(flatten(original), expected)
+})
+
+test('It should process an empty array', t => {
+  const original = {
+    a: [],
+    b: 1,
+    c: {
+      d: []
+    }
+  }
+  const expected = {
+    a: [],
+    b: 1,
+    'c.d': []
+  }
+
+  t.deepEqual(flatten(original), expected)
+})
+
+test('It should process an empty object', t => {
+  const original = {
+    a: {},
+    b: 1,
+    c: {
+      d: []
+    }
+  }
+  const expected = {
+    a: {},
+    b: 1,
+    'c.d': []
+  }
+
+  t.deepEqual(flatten(original), expected)
+})
+
 test('it should handle nested arrays', (t) => {
   const original = {
     a: [0, 1]
