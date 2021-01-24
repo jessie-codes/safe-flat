@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/jessie-codes/safe-flat/compare/2.0.1...2.0.2) (2021-01-24)
+
+
+### Bug Fixes
+
+* **unflat:** fix potential for prototype pollution ([4b9b7db](https://github.com/jessie-codes/safe-flat/commit/4b9b7db976bba8c968354f4315f5f9c219b7cbf3))
+
+
+
 ## [2.0.1](https://github.com/jessie-codes/safe-flat/compare/2.0.0...2.0.1) (2020-12-31)
 
 
