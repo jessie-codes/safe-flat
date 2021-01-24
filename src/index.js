@@ -45,6 +45,7 @@ const flatten = (obj, delimiter) => {
 const unflatten = (obj, delimiter) => {
   const result = {}
   const seperator = delimiter || defaultDelimiter
+  const proto = ['__proto__', 'constructor', 'prototype']
 
   if (typeof obj !== 'object' || isDate(obj)) return obj
 
@@ -52,6 +53,7 @@ const unflatten = (obj, delimiter) => {
     Object.keys(original).forEach((key) => {
       const newKeys = key.split(seperator)
       newKeys.reduce((o, k, i) => {
+        if (proto.includes(newKeys[i])) return o
         return o[k] || (o[k] = isNaN(Number(newKeys[i + 1])) ? (newKeys.length - 1 === i ? original[key] : {}) : [])
       }, result)
     })

@@ -150,3 +150,15 @@ test('it should handle date objects', (t) => {
 
   t.deepEqual(unflatten(original), expected)
 })
+
+test('it should not pollute the prototype', (t) => {
+  const original = {
+    '__proto__.polluted': 'Attempt to pollute the prototype',
+    'a.prototype.polluted': 'Attempt to pollute the prototype',
+    'a.b': 'This attribute is safe',
+    'c.constructor.polluted': 'Attempt to pollute the prototype',
+    'constructor.polluted': 'Attempt to pollute the prototype'
+  }
+  unflatten(original)
+  t.assert({}.polluted == null)
+})
