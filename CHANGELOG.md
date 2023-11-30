@@ -1,3 +1,7 @@
+# [2.1.0](https://github.com/jessie-codes/safe-flat/compare/2.0.3...2.1.0) (2023-11-30)
+
+
+
 ## [2.0.3](https://github.com/jessie-codes/safe-flat/compare/2.0.2...2.0.3) (2023-11-30)
 
 
