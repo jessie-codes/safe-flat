@@ -1,5 +1,9 @@
 # [2.1.0](https://github.com/jessie-codes/safe-flat/compare/2.0.3...2.1.0) (2023-11-30)
 
+### Features
+
+* Adds type definitions to both flatten and unflatten fns. ([4618622](https://github.com/jessie-codes/safe-flat/commit/46186224042b0f7a0dfb8dac37c7dd568bbab632)), closes [#50](https://github.com/jessie-codes/safe-flat/issues/50)
+
 
 
 ## [2.0.3](https://github.com/jessie-codes/safe-flat/compare/2.0.2...2.0.3) (2023-11-30)
