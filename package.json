@@ -49,5 +49,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "types": "types/index.d.ts"
 }
