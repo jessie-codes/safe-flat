@@ -19,7 +19,7 @@ $ npm i safe-flat
 
 ### flatten(obj, [delimiter])
 
-Flats an object to one level deep. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references within the object will be replaced with `[Circular]`.
+Flattens an object to one level deep. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references within the object will be replaced with `[Circular]`.
 
 ``` javascript
 const { flatten } = require('safe-flat')
@@ -66,7 +66,7 @@ const underscoreFlat = flatten(original, '_')
 ```
 ### unflatten(obj, [delimiter])
 
-Unflats an object back to its original nested form. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references denoted by `[Circular]` are treated as Strings.
+Unflattens an object back to its original nested form. Optionally takes a custom `delimiter`, otherwise uses `.` by default. Circular references denoted by `[Circular]` are treated as Strings.
 
 ``` javascript
 const { unflatten } = require('safe-flat')
